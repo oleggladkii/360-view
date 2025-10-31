@@ -53,8 +53,8 @@ const createScene = (): BABYLON.Scene => {
     ['/assets/video/video.mp4'],
     {
       clickToPlay: true,
-      resolution: 16,
-      size: 1000,
+      resolution: 512,
+      size: 256,
       generateMipMaps: false,
       halfDomeMode: false,
       useDirectMapping: false,
@@ -155,12 +155,6 @@ onBeforeUnmount(() => {
   camera = null
   dome = null
 })
-
-const formatTime = (seconds: number): string => {
-  const mins = Math.floor(seconds / 60)
-  const secs = Math.floor(seconds % 60)
-  return `${mins}:${secs.toString().padStart(2, '0')}`
-}
 
 const togglePlayPause = () => {
   if (!dome?.videoTexture?.video) return
