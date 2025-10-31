@@ -50,7 +50,7 @@ const createScene = (): BABYLON.Scene => {
 
   dome = new BABYLON.VideoDome(
     'videoDome',
-    ['/assets/video/video.mp4'],
+    ['https://hrm.onix.team/CityRide.mp4'],
     {
       clickToPlay: true,
       resolution: 512,
